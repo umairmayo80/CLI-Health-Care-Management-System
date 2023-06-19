@@ -33,6 +33,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         }
     }
 
+    //better readibilty 
     public List<Schedule> loadSchedule() {
         List<Schedule> scheduleList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(scheduleFilePath))) {

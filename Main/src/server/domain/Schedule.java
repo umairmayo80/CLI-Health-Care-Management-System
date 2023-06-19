@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
 
+//difference between schedule and appointment
 public class Schedule {
     private int userId;
     private LocalDate date;

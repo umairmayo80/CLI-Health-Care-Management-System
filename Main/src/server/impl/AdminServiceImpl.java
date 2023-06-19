@@ -7,9 +7,10 @@ import server.service.AdminService;
 import java.util.List;
 import java.util.Optional;
 
-
+//impl package should be inside the service package
 public class AdminServiceImpl implements AdminService {
 
+    //user service method
     private boolean isUsernameAvailable(String username) {
         List<User> userList = ServiceContext.getUserService().getUsers();
         for (User user : userList) {
@@ -38,6 +39,7 @@ public class AdminServiceImpl implements AdminService {
 
     public void setUserAccountStatus(String username,boolean status) {
 
+        //you may add a method in user service like getUserbyName
         Optional<User> targetUser = ServiceContext.getUserService().getUsers().stream()
                 .filter(user -> user.getUsername().equals(username))
                 .findFirst();
@@ -73,6 +75,8 @@ public class AdminServiceImpl implements AdminService {
 
     }
 
+
+    //no need of main method
     public static void main(String[] args){
 //        UserService.viewPatients();
 //

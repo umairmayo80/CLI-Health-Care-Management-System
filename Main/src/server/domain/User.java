@@ -3,6 +3,7 @@ package server.domain;
 import java.io.*;
 import java.util.Objects;
 
+//the busines logics like loading an ID should be in service layer
 public class User {
     private static final String ID_FILE_PATH = "lastAssignedId.txt";
     private static int lastAssignedId;
@@ -125,6 +126,7 @@ public class User {
                 '}';
     }
 
+//optional: id is suffice to check equality
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

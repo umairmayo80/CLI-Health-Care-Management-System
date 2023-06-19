@@ -11,6 +11,7 @@ public class Appointment {
     private int doctorId;
     private LocalDateTime dateTime;
 
+//why these comments
 //    private static List<server.domain.Appointment> appointmentsList;
 //
 //    static {
@@ -66,6 +67,7 @@ public class Appointment {
     }
 
 
+    //no need of this method
     // Example usage in the main method
     public static void main(String[] args) {
 

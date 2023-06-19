@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 public class PatientServiceImpl implements PatientService {
 
+    //call apointment service (getAppointmentByPatientId)
     public  void viewAppointments(int patient_id){
         List<Appointment> appointments = ServiceContext.getAppointmentService().getAppointments().stream()
                 .filter(appointment -> appointment.getPatientId() == patient_id)
@@ -18,6 +19,7 @@ public class PatientServiceImpl implements PatientService {
         }
     }
 
+    // you may make this more readible
     public boolean addAppointment(Appointment appointment){
         //check if the doctor is available or not
         List<server.domain.Schedule> scheduleList = ServiceContext.getScheduleService().getSchedules();
@@ -38,7 +40,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
 
-
+    //no need of this main method
     public static void main(String[] args){
 
 //        System.out.println(FileModificationChecker.isFileModified("lastAssignedId.txt",FileModificationChecker.loadedLastModifiedInfo.get("lastAssignedId.txt")));

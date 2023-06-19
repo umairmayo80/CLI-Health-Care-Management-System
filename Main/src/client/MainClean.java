@@ -10,6 +10,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+//A proper name like CLI (or HCMSCLI)
+//docs
 public class MainClean {
     private final Scanner scanner;
     private final PatientService patientService;
@@ -116,6 +118,7 @@ public class MainClean {
         System.out.print("Enter password: ");
         String password = scanner.nextLine().strip();
 
+//do not commment
 //        scanner.close();
         User user = userService.validateUserLogin(username,password);
         if(user!= null && user.getRoll().equals(userRoll.toLowerCase()))

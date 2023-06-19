@@ -4,6 +4,8 @@ package server.domain;
 import server.impl.PatientServiceImpl;
 import server.service.PatientService;
 
+//remove the comments
+//use vcs
 public class Patient extends User{
 //    private List<server.domain.Appointment> appointments;
 
@@ -30,6 +32,7 @@ public class Patient extends User{
         '}';
 }
 
+    //no need of main method
     public static void main(String[] args){
         Patient patient = new Patient(-1,"patient1","pat123","pat123");
 

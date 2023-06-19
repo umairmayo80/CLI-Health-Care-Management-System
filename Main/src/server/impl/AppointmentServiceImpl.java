@@ -89,6 +89,8 @@ public class AppointmentServiceImpl implements AppointmentService {
         saveAppointmentsToFile();
     }
 
+    //no need of main method
+
     public static void main(String[] args)
     {
 //        String filePath = "appointments.csv";

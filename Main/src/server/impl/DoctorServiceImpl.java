@@ -14,6 +14,8 @@ public class DoctorServiceImpl implements DoctorService {
         ServiceContext.getScheduleService().addScheduleEntry(schedule);
     }
 
+    //you may call apointment service from here 
+    //to get all apointments of doctor
     public void viewAppointments(int userID) {
         List<Appointment> appointments = ServiceContext.getAppointmentService().getAppointments().stream()
                 .filter(appointment -> appointment.getDoctorId() == userID)
@@ -28,6 +30,8 @@ public class DoctorServiceImpl implements DoctorService {
         ServiceContext.getScheduleService().getSchedulesByID(userID).forEach(System.out::println);
     }
 
+
+    //no need of main method
     public  void main(String[] args) throws ScheduleCreationException {
 //        Doctor doctor = new Doctor(-3,"doctor1","pat123","pat123");
 ////

@@ -26,6 +26,7 @@ public class Admin extends User {
     }
 
 
+    //why main method
     public static void main(String[] args){
         ServiceContext.getAdminService().addUser(new User(-30,"adminServiceTest","admin","admin12","admin123",false));
 

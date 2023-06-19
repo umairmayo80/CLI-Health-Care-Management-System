@@ -1,6 +1,6 @@
 package server.domain;
 
-
+//clean
 public class Doctor extends User{
 
 //    private List<server.domain.Appointment> appointments;
