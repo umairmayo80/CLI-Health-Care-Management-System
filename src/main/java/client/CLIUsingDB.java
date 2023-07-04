@@ -17,7 +17,7 @@ import server.utilities.ScheduleCreationException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CLI {
+public class CLIUsingDB {
     private final Scanner scanner;
     private final PatientService patientService;
     private final DoctorService doctorService;
@@ -29,9 +29,9 @@ public class CLI {
 
 
     // Constructor injection
-    CLI( UserService userService, AdminService adminService,
-        PatientService patientService, DoctorService doctorService,
-        AppointmentServiceV1 appointmentServiceV1, SlotService slotService) {
+    CLIUsingDB(UserService userService, AdminService adminService,
+               PatientService patientService, DoctorService doctorService,
+               AppointmentServiceV1 appointmentServiceV1, SlotService slotService) {
         this.userService = userService;
         this.adminService = adminService;
         this.patientService = patientService;
@@ -44,7 +44,7 @@ public class CLI {
         this.scanner = ServiceContext.getScanner();
     }
 
-    private static CLI initializeCLI() {
+    private static CLIUsingDB initializeCLI() {
         int choice = 0;
         do {
             System.out.print("\nWelcome to Health Care System"
@@ -67,7 +67,7 @@ public class CLI {
                     DoctorService doctorServiceFile = new DoctorServiceImpl();
                     AppointServiceV1FileImpl appointmentServiceFile = new AppointServiceV1FileImpl();
                     SlotServiceFileImpl slotServiceFile = new SlotServiceFileImpl();
-                    return new CLI(userServiceFile, adminServiceFile, patientServiceFile, doctorServiceFile,
+                    return new CLIUsingDB(userServiceFile, adminServiceFile, patientServiceFile, doctorServiceFile,
                             appointmentServiceFile, slotServiceFile);
 
                 case 2:
@@ -77,7 +77,7 @@ public class CLI {
                     DoctorService doctorServiceDB = new DoctorServiceImpl();
                     AppointmentServiceV1 appointmentServiceDB = new AppointmentServiceV1DBImpl();
                     SlotService slotService1 = new SlotsServiceDBImpl();
-                    return new CLI(userServiceDB, adminServiceDB, patientServiceDB, doctorServiceDB,
+                    return new CLIUsingDB(userServiceDB, adminServiceDB, patientServiceDB, doctorServiceDB,
                             appointmentServiceDB, slotService1);
                 case 3:
                     System.out.println("Exiting...");
@@ -92,7 +92,7 @@ public class CLI {
     }
 
     public static void main(String[] args) {
-        CLI cli = CLI.initializeCLI();
+        CLIUsingDB cli = CLIUsingDB.initializeCLI();
         cli.displayWelcomeMenu();
     }
 

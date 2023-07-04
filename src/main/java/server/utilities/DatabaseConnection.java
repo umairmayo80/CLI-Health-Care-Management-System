@@ -14,7 +14,7 @@ public class DatabaseConnection {
     public DatabaseConnection() {
         url = "jdbc:mysql://localhost:3306/";
         username = "root";
-        password = "password123";
+        password = "Ts123456!";
         databaseName = "HealthCareTest";
     }
 

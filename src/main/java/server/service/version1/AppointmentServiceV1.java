@@ -7,17 +7,17 @@ public interface AppointmentServiceV1 {
 
 
     // Save appointments to storage
-    public void saveAppointmentsToStorage(List<AppointmentV1> appointmentList);
+     void saveAppointmentsToStorage(List<AppointmentV1> appointmentList);
 
-    public List<AppointmentV1> getAppointments();
+     List<AppointmentV1> getAppointments();
 
     void viewAllAppointments();
 
-    public void viewAppointmentsByPatientId(int patientId);
+     void viewAppointmentsByPatientId(int patientId);
 
-    public void viewAppointmentsByDoctorId(int doctorId);
+     void viewAppointmentsByDoctorId(int doctorId);
 
-    public boolean addAppointmentEntry(AppointmentV1 appointment);
+     boolean addAppointmentEntry(AppointmentV1 appointment);
 
 
 }
