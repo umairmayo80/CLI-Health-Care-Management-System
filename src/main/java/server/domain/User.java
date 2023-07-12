@@ -26,6 +26,8 @@ public class User {
 
     private String password;
 
+    //database column name should be snake case
+    //account_locked
     @Column(name = "accountLocked")
     private boolean accountLocked;
 

@@ -14,9 +14,9 @@ public class DatabaseConnection {
     Connection connection;
 
     public DatabaseConnection() {
-        url = "jdbc:mysql://localhost:3306/";
-        username = "test";
-        password = "password123!";
+        url = "jdbc:mysql://localhost:3326/";
+        username = "HealthCareTest";
+        password = "password123";
         databaseName = "HealthCareTest";
     }
 
@@ -45,6 +45,7 @@ public class DatabaseConnection {
         dataSource.setUrl(url + databaseName);
         dataSource.setUser(username);
         dataSource.setPassword(password);
+        dataSource.setUseSSL(false);
 
         try {
             connection = dataSource.getConnection();

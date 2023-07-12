@@ -13,6 +13,7 @@ import java.util.List;
 @Component
 @Scope("singleton")
 public class UserServiceHibernateImpl implements UserService {
+    //make it final
     private UserRepoHibernateImpl userRepoHibernate;
 
     public UserServiceHibernateImpl(){
