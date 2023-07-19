@@ -470,6 +470,7 @@ public class CLI {
         } while (true);
     }
 
+    //why not in service layer
     private void createAppointment() {
         int selectedSlotId = 0;
         System.out.println("Create new Appointment function called");
@@ -502,6 +503,7 @@ public class CLI {
         appointmentServiceV1.viewAppointmentsByDoctorId(currentUser.getUserId());
     }
 
+    //why not in service layer
     public void newSlotEntry() {
         System.out.println("Adding New Slot Entry function called...");
 
