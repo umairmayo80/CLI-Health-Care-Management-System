@@ -10,7 +10,7 @@ import server.domain.Appointment;
 import java.util.List;
 
 
-@Component
+@Component //repository
 public class AppointmentRepoHibernate implements AppointmentV1Repository {
     SessionFactory sessionFactory;
     SlotRepoHibernateImpl slotRepoHibernate;

@@ -25,8 +25,10 @@ public class AppConfig {
         return new Scanner(System.in);
     }
 
+    //where is this bean being used?
     @Bean
     public Connection getConnection(){
+        //why not autowiring
         DatabaseConnection databaseConnection = new DatabaseConnection();
         return databaseConnection.getConnection();
     }
@@ -37,6 +39,8 @@ public class AppConfig {
         String url = databaseConnection.getUrl();
         String username = databaseConnection.getUsername();
         String password = databaseConnection.getPassword();
+        //why not getting db name from databaseConnection
+        //databaseConnection.getDatabaseName();
         String databaseName = "HealthCareDatabase";
         SessionFactory sessionFactory = null;
         try{

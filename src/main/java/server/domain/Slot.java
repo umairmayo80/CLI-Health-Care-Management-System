@@ -44,6 +44,8 @@ public class Slot {
     public Slot()
     {
     }
+    
+    //remove constructor
     public Slot(int doctorId, LocalDate date, LocalTime startTime, LocalTime endTime) {
         this.slotId = 0;
         this.doctorId = doctorId;
@@ -53,6 +55,7 @@ public class Slot {
         this.occupied = false;
     }
 
+    //remove and move this construction in service layer
     public Slot(int doctorId, String date, String startTime, String endTime) throws ScheduleCreationException {
         this.slotId = 0;
         this.occupied = false;
@@ -77,6 +80,7 @@ public class Slot {
 
     }
 
+    //remove and move this to service layer
     public Slot(int slotId, int doctorId, String date, String startTime, String endTime, boolean occupied) throws ScheduleCreationException {
         this.slotId = slotId;
         this.occupied = occupied;
@@ -101,6 +105,7 @@ public class Slot {
 
     }
 
+    //remove unused constructor
     public Slot(int slotId, int doctorId, User doctor, LocalDate date, LocalTime startTime, LocalTime endTime, boolean occupied) {
         this.slotId = slotId;
         this.doctorId = doctorId;
@@ -112,6 +117,7 @@ public class Slot {
     }
 
 
+    //remove unused constructor
     public Slot(int slotId, int doctorId, User doctor, LocalDate date, LocalTime startTime, LocalTime endTime, boolean occupied, Appointment appointmentV1) {
         this.slotId = slotId;
         this.doctorId = doctorId;

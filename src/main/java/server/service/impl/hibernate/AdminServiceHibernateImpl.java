@@ -22,12 +22,14 @@ public class AdminServiceHibernateImpl implements AdminService {
 
     @Override
     public boolean addUser(User user) {
+        //remove commented code
 //        return ServiceContext.getUserServiceHibernate().addUserEntry(user);
         return userService.addUserEntry(user);
     }
 
     @Override
     public boolean setUserAccountStatus(String username, boolean status) {
+        // why not using repo pattern
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
         try {

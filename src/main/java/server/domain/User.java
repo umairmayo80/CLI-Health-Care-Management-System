@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.*;
 import java.util.*;
 
-
+//remove transiet
 @Entity
 @Table(name = "user_table")
 public class User {
@@ -28,6 +28,7 @@ public class User {
 
     //database column name should be snake case
     //account_locked
+    //^
     @Column(name = "accountLocked")
     private boolean accountLocked;
 
@@ -39,6 +40,7 @@ public class User {
     private List<Appointment> appointmentV1List = new ArrayList<>();
 
 
+    //remove static block
     static {
         loadLastAssignedId();
     }
@@ -46,7 +48,7 @@ public class User {
     public User() {
     }
 
-
+    //remove all following constructor
     public User(String name, String roll) {
         this(name, roll, "", "");
     }

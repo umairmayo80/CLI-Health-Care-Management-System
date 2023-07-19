@@ -9,7 +9,7 @@ import static server.utilities.DisplayFormatting.displayAppointmentData;
 
 import java.util.List;
 
-@Component
+@Component //change this to @Service
 public class AppointmentServiceV1DBImpl implements AppointmentServiceV1 {
     private final AppointmentV1RepoDbImpl appointmentV1RepoDb;
 

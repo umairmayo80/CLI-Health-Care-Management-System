@@ -10,7 +10,7 @@ import server.domain.Slot;
 import java.util.List;
 
 
-@Component
+@Component //repository
 public class SlotRepoHibernateImpl implements SlotRepository {
     private final SessionFactory sessionFactory;
 
