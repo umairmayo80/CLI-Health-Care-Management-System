@@ -9,8 +9,10 @@ public interface AppointmentServiceV1 {
 
 
     // Save appointments to storage
+    // remove unused method
     void saveAppointmentsToStorage(List<Appointment> appointmentList);
 
+    //get
     List<Appointment> getAppointments();
 
     void viewAllAppointments();
@@ -19,8 +21,10 @@ public interface AppointmentServiceV1 {
 
     void viewAppointmentsByDoctorId(int doctorId);
 
+    //remove entry
+    //add(Appointment) is sufficed
     boolean addAppointmentEntry(Appointment appointment);
-
+    //add(Appointment,User) is sufficed
     boolean addAppointment(Appointment appointmentV1, User currentUser);
 
 

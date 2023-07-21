@@ -10,9 +10,13 @@ import server.utilities.DisplayFormatting;
 
 import java.util.List;
 
+//why you have removed other entities (doctor, patient, admin)
+//though they are placeholder (having nothing extra)
+//but it will help to understand bounded context better
 @Component
 @Scope("singleton")
 public class UserServiceHibernateImpl implements UserService {
+    //make it final
     private UserRepoHibernateImpl userRepoHibernate;
 
     public UserServiceHibernateImpl(){

@@ -2,6 +2,7 @@ package server.domain;
 
 import javax.persistence.*;
 
+//remove ids (transient)
 @Entity
 @Table(name = "appointment_table")
 public class Appointment {
@@ -29,6 +30,7 @@ public class Appointment {
 
     }
 
+    //remove unused constructor
     // Constructor
     public Appointment(int appointmentId, int patientId, int doctorSlotId) {
         this.patientId = patientId;
@@ -42,6 +44,7 @@ public class Appointment {
         this. doctorSlotId = doctorSlotId;
     }
 
+    //remove unused constructor
     public Appointment(int appointmentId, User patient, Slot slot, int patientId, int doctorSlotId) {
         this.appointmentId = appointmentId;
         this.patient = patient;

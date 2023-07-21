@@ -10,7 +10,7 @@ import static server.utilities.DisplayFormatting.displayAppointmentData;
 
 import java.util.List;
 
-@Component
+@Component //change this annotation to @Service
 public class AppointmentServiceV1HibernateImpl implements AppointmentServiceV1 {
     private final AppointmentRepoHibernate appointmentRepoHibernate;
 

@@ -13,6 +13,7 @@ public class DatabaseConnection {
     private final String databaseName;
     Connection connection;
 
+    //get from external props file
     public DatabaseConnection() {
         url = "jdbc:mysql://localhost:3306/";
         username = "test";

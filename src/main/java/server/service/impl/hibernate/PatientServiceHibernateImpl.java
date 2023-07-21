@@ -6,7 +6,7 @@ import server.domain.Appointment;
 import server.domain.User;
 import server.service.PatientService;
 
-@Component
+@Component //service
 public class PatientServiceHibernateImpl implements PatientService {
 
     private final AppointmentServiceV1HibernateImpl appointmentServiceV1Hibernate;
